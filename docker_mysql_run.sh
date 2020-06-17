@@ -1,0 +1,1 @@
+docker run -p 12345:3306 --name mysql -v /Users/haoning/docker_mysql/conf:/etc/mysql/conf.d -v /Users/haoning/docker_mysql/logs:/logs -v  /Users/haoning/docker_mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6

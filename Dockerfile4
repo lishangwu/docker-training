@@ -1,0 +1,12 @@
+FROM centos
+
+RUN yum install -y curl
+
+CMD echo "finished,--------success"
+CMD /bin/bash
+ENTRYPOINT ["curl", "-s", "http://www.baidu.com"]
+
+
+# docker run -it -v /host1:/dataVolumnContainer1 -v host2:/dataVolumnContainer2 centos /bin/bash
+# docker build -f ./Dockerfile -t centos .
+# ENTRYPOINT 追加 

@@ -1,0 +1,1 @@
+docker exec 97e95ba013e1 sh -c 'exec mysqldump --all-databases -uroot -p"123456"' > /Users/haoning/docker_mysql/all-databases.sql
