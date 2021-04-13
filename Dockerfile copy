@@ -1,0 +1,4 @@
+FROM centos
+VOLUME [ "/data1", "/data2" ]
+CMD echo "finished...success"
+CMD /bin/bash

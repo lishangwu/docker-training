@@ -1,0 +1,11 @@
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+
+# create plugin folder cd your-es-root/plugins/ && mkdir ik
+# unzip plugin to folder your-es-root/plugins/ik
+
+COPY elasticsearch-analysis-ik-7.12.0.zip /opt/elasticsearch-analysis-ik-7.12.0.zip
+RUN \
+    yum install -y zip && \
+    cd /opt && \
+    unzip elasticsearch-analysis-ik-7.12.0.zip -d elasticsearch-analysis-ik-7.12.0 && \
+    mv elasticsearch-analysis-ik-7.12.0 /usr/share/elasticsearch/plugins/ik
