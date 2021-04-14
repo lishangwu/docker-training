@@ -5,10 +5,6 @@ docker rm -f mysql-test
 docker rm -f wordpress
 sudo rm -rf docker_mysql_test
 
-docker rm -f mysql-test
-
-docker run -itd --name mysql-test -v ~/docker_mysql_test/data:/var/lib/mysql -p 7306:3306 -e MYSQL_ROOT_PASSWORD=Autobot@123456 mysql:latest
-
 docker run -itd \
     --name mysql-test \
     -v ~/docker_mysql_test/conf:/etc/mysql/conf.d \
