@@ -1,1 +1,3 @@
-docker run -p 12345:3306 --name mysql -v /Users/haoning/docker_mysql/conf:/etc/mysql/conf.d -v /Users/haoning/docker_mysql/logs:/logs -v  /Users/haoning/docker_mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
+# https://www.runoob.com/docker/docker-install-mysql.html
+
+docker run -itd --name mysql-test -v ~/docker_mysql_test/conf:/etc/mysql/conf.d -v ~/docker_mysql_test/logs:/logs -v  ~/docker_mysql_test/data:/var/lib/mysql -p 7306:3306 -e MYSQL_ROOT_PASSWORD=Autobot@123456 -d mysql:latest
